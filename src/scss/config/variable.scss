@@ -2,14 +2,19 @@
 :root {
   font-size: 16px;
   --font-family: 'Roboto', sans-serif;
+  // * height
+  --header-height: 80px;
   // * background-color
   --header-background-color: #f4f9f9;
   --hero-background-color: #e7fafb;
   --default-background-color: #fff;
+  --footer-background-color: #f4f9f9;
   // * text-color
   --logo-color: #707070;
   --nav-text-color: #000000;
   --active-link-color: #1687a7;
+  --text-color-black: #000000;
+  --text-color-black-2: #aaaaaa;
   // * icon-color
   --icon-color: #139cf7;
   --icon-color-2: #0a66c2;

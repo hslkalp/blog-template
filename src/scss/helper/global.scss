@@ -1,3 +1,30 @@
 body {
   font-family: var(--font-family);
 }
+a,
+a:link {
+  color: var(--text-color-black);
+}
+.btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 2px 5px;
+  &:focus {
+    border: 1px solid black;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.show-menu {
+  opacity: 1;
+}

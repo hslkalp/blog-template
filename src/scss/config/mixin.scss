@@ -1,0 +1,26 @@
+@mixin header-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin screen($width: 'mobile') {
+  @if ($width == 'mobile') {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if ($width == 'tablet') {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if($width == 'desktop') {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if($width == 'desktop-lg') {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

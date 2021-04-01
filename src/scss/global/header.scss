@@ -1,0 +1,77 @@
+.header-measure {
+  max-width: 1200px;
+  margin: 0px auto;
+  height: 100%;
+  position: relative;
+  @include header-flex();
+}
+header {
+  font-size: 1rem;
+  height: var(--header-height);
+  background: var(--header-background-color);
+  .logo {
+    padding: 10px;
+    a {
+      font-size: 2.1em;
+      color: var(--logo-color);
+    }
+    @include screen('desktop') {
+      padding: 0px;
+    }
+  }
+  nav {
+    font-size: 1rem;
+    button.menu-btn {
+      margin-right: 10px;
+      @include screen('desktop') {
+        display: none;
+      }
+    }
+    ul {
+      opacity: 0;
+      position: absolute;
+      top: var(--header-height);
+      left: 0px;
+      background: var(--header-background-color);
+      width: 100%;
+      padding: 10px;
+      border-top: 1px solid var(--text-color-black-2);
+      transition: 1s opacity ease;
+      @include screen('desktop') {
+        padding: 0px;
+        @include header-flex();
+        position: static;
+        border: none;
+        opacity: 1;
+        transition: none;
+      }
+      li {
+        // margin-right: 1em;
+        margin-bottom: 10px;
+        padding: 4px 9px;
+        @include screen('tablet') {
+          margin-right: 5em;
+        }
+        @include screen('desktop') {
+          margin-bottom: 0px;
+        }
+        &:last-child {
+          margin-right: 0px;
+        }
+        a {
+          font-size: 1.25em;
+          font-weight: 700;
+          text-transform: capitalize;
+          color: var(--text-color-black);
+          transition: 0.5s all ease;
+          &.active-link {
+            color: var(--active-link-color);
+          }
+          &:hover {
+            color: var(--logo-color);
+          }
+        }
+      }
+    }
+  }
+}

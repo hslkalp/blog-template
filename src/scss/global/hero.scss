@@ -1,0 +1,59 @@
+.hero-measure {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+section.hero {
+  font-size: 1rem;
+  padding: calc(var(--padding-gap) * 2) 0px;
+  background: var(--hero-background-color);
+  .hero-heading {
+    max-width: 900px;
+    margin-bottom: 10px;
+    padding: var(--padding-gap);
+    @include screen('tablet') {
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 1.5em;
+      line-height: 1.3em;
+      @include screen('mobile') {
+        font-size: 2.5em;
+      }
+      @include screen('tablet') {
+        font-size: 4em;
+        line-height: 1.1em;
+      }
+    }
+  }
+  .hero-content {
+    padding: var(--padding-gap);
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      @include screen('mobile') {
+        font-size: 1.3em;
+        margin-bottom: 30px;
+      }
+      @include screen('tablet') {
+        margin-bottom: 40px;
+      }
+    }
+    ul.social-media-list {
+      max-width: 140px;
+      @include screen('tablet') {
+        margin-bottom: 10px;
+      }
+      @include flex-list();
+      li {
+        margin-right: 15px;
+        a {
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

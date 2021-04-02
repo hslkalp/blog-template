@@ -14,7 +14,8 @@
   --text-color-black-2: #aaaaaa;
   --icon-color: #139cf7;
   --icon-color-2: #0a66c2;
-  --icon-color-3: #24292e; }
+  --icon-color-3: #24292e;
+  --padding-gap: 10px; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -533,6 +534,7 @@ header {
     header nav ul {
       opacity: 0;
       position: absolute;
+      z-index: 9;
       top: var(--header-height);
       left: 0px;
       background: var(--header-background-color);
@@ -572,3 +574,55 @@ header {
             color: var(--active-link-color); }
           header nav ul li a:hover {
             color: var(--logo-color); }
+
+.hero-measure {
+  max-width: 1200px;
+  margin: 0px auto; }
+
+section.hero {
+  font-size: 1rem;
+  padding: calc(var(--padding-gap) * 2) 0px;
+  background: var(--hero-background-color); }
+  section.hero .hero-heading {
+    max-width: 900px;
+    margin-bottom: 10px;
+    padding: var(--padding-gap); }
+    @media (min-width: 768px) {
+      section.hero .hero-heading {
+        margin-bottom: 40px; } }
+    section.hero .hero-heading h1 {
+      font-size: 1.5em;
+      line-height: 1.3em; }
+      @media (min-width: 576px) {
+        section.hero .hero-heading h1 {
+          font-size: 2.5em; } }
+      @media (min-width: 768px) {
+        section.hero .hero-heading h1 {
+          font-size: 4em;
+          line-height: 1.1em; } }
+  section.hero .hero-content {
+    padding: var(--padding-gap); }
+    section.hero .hero-content p {
+      font-size: 1.2em;
+      margin-bottom: 20px; }
+      @media (min-width: 576px) {
+        section.hero .hero-content p {
+          font-size: 1.3em;
+          margin-bottom: 30px; } }
+      @media (min-width: 768px) {
+        section.hero .hero-content p {
+          margin-bottom: 40px; } }
+    section.hero .hero-content ul.social-media-list {
+      max-width: 140px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center; }
+      @media (min-width: 768px) {
+        section.hero .hero-content ul.social-media-list {
+          margin-bottom: 10px; } }
+      section.hero .hero-content ul.social-media-list li {
+        margin-right: 15px; }
+        section.hero .hero-content ul.social-media-list li a svg {
+          width: 24px;
+          height: 24px; }

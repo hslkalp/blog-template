@@ -5,6 +5,13 @@
   align-items: center;
 }
 
+@mixin flex-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin screen($width: 'mobile') {
   @if ($width == 'mobile') {
     @media (min-width: 576px) {

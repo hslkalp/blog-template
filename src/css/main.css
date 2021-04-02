@@ -502,6 +502,65 @@ a:link {
 .show-menu {
   opacity: 1; }
 
+.blog-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-gap);
+  font-size: 1rem; }
+  @media (min-width: 576px) {
+    .blog-card {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start; } }
+  .blog-card-block1 {
+    flex: 1; }
+  @media (min-width: 576px) {
+    .blog-card-block2 {
+      margin-left: 35px; } }
+  .blog-card figure {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin-bottom: 20px; }
+    .blog-card figure img {
+      width: 100%;
+      height: auto; }
+    .blog-card figure figcaption {
+      margin-top: 5px; }
+      .blog-card figure figcaption p {
+        font-size: 0.9em;
+        color: var(--text-color-black);
+        font-weight: 700;
+        text-transform: capitalize; }
+        @media (min-width: 992px) {
+          .blog-card figure figcaption p {
+            font-size: 1.125; } }
+  .blog-card h3.blog-card-title {
+    margin-bottom: 10px; }
+    .blog-card h3.blog-card-title a {
+      font-size: 1.2em;
+      color: var(--active-link-color);
+      text-decoration: underline;
+      font-weight: 700; }
+      .blog-card h3.blog-card-title a:hover {
+        text-decoration: none; }
+      @media (min-width: 992px) {
+        .blog-card h3.blog-card-title a {
+          font-size: 2em; } }
+  .blog-card p.blog-card-summary {
+    max-width: 580px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: var(--text-color-black-2); }
+    @media (min-width: 992px) {
+      .blog-card p.blog-card-summary {
+        font-size: 1.125; } }
+  .blog-card p.blog-card-meta {
+    font-size: 0.8em;
+    color: var(--text-color-black); }
+
 .header-measure {
   max-width: 1200px;
   margin: 0px auto;
@@ -626,3 +685,17 @@ section.hero {
         section.hero .hero-content ul.social-media-list li a svg {
           width: 24px;
           height: 24px; }
+
+.content-measure {
+  max-width: 1200px;
+  margin: 0px auto; }
+
+section.content {
+  background: var(--default-background-color); }
+
+.content-heading {
+  margin: 30px 0px;
+  padding: var(--padding-gap); }
+  .content-heading h2 {
+    font-size: 1.5em;
+    text-transform: uppercase; }

@@ -1,0 +1,27 @@
+.footer-measure {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  height: var(--footer-height);
+  margin-top: 20px;
+  background: var(--footer-background-color);
+  @include screen('mobile') {
+    position: relative;
+    bottom: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  p {
+    font-size: 1.1em;
+    @include screen('desktop') {
+      font-size: 1.3em;
+    }
+  }
+}
